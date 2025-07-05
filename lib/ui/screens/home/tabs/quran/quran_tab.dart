@@ -53,10 +53,11 @@ class QuranTab extends StatelessWidget {
     );
   }
 
-  buildSuraListView() {
+  Widget buildSuraListView() {
     return ListView.separated(
       itemCount: AppConstants.suras.length,
       itemBuilder: (context, index) {
+        print("Suras count: ${AppConstants.suras.length}");
         return InkWell(
             onTap: () {
               Navigator.pushNamed(context, SuraDetials.routeName,

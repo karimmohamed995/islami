@@ -15,7 +15,7 @@ class SuraDetials extends StatefulWidget {
 
 class _SuraDetialsState extends State<SuraDetials> {
   late SuraDM sura;
-  late String suraContent;
+  String suraContent = "";
 
   @override
   Widget build(BuildContext context) {
@@ -86,13 +86,13 @@ class _SuraDetialsState extends State<SuraDetials> {
     );
   }
 
-  void readSuraContent() async {
-    String fileName = "${sura.index}.txt";
+  Future readSuraContent() async {
+    String fileName = "assets/files/quran/${sura.index}.txt";
     Future<String> contentFuture = rootBundle.loadString(fileName);
     suraContent = await contentFuture;
-    List<String> suraLines = suraContent.trim().split("/n");
+    List<String> suraLines = suraContent.trim().split("\n");
     for (var i = 0; i < suraLines.length; i++) {
-      suraLines[i] += "[${i + 1}] ";
+      suraLines[i] += "[${i + 1}]  ";
     }
     suraContent = suraLines.join();
     setState(() {});
