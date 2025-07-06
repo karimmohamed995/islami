@@ -16,4 +16,6 @@ abstract final class AppAssets {
   static const String rightPattern = "assets/images/right_pattern.png";
   static const String mosqueBg = "assets/images/mosque_image.png";
   static const String hadethBg = "assets/images/hadeth_bg.png";
+  static const String sebhaBg = "assets/images/sebha_bg.png";
+  static const String sebhaImage = "assets/images/Sebha_image.png";
 }

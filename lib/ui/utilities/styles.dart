@@ -10,6 +10,8 @@ abstract final class AppTextStyles {
       fontSize: 12, color: AppColors.white, fontWeight: FontWeight.bold);
   static const whiteBold16 = TextStyle(
       fontSize: 16, color: AppColors.white, fontWeight: FontWeight.bold);
+  static const whiteBold36 = TextStyle(
+      fontSize: 36, color: AppColors.white, fontWeight: FontWeight.bold);
 
   static const blackBold24 = TextStyle(
       fontSize: 24, color: AppColors.black, fontWeight: FontWeight.bold);

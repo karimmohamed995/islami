@@ -17,6 +17,12 @@ class AhadethTab extends StatefulWidget {
 }
 
 class _AhadethTabState extends State<AhadethTab> {
+  @override
+  // void initState() {
+  //   super.initState();
+  //   readAhadethFile();
+  // }
+
   List<Hadeth> ahadeth = [];
   @override
   Widget build(BuildContext context) {
@@ -40,8 +46,8 @@ class _AhadethTabState extends State<AhadethTab> {
                 enableInfiniteScroll: true,
                 reverse: false,
                 autoPlay: false,
-                autoPlayInterval: Duration(seconds: 3),
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayInterval: const Duration(seconds: 3),
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
                 autoPlayCurve: Curves.fastOutSlowIn,
                 enlargeCenterPage: true,
                 enlargeFactor: 0.3,
@@ -51,7 +57,7 @@ class _AhadethTabState extends State<AhadethTab> {
               itemBuilder:
                   (BuildContext context, int itemIndex, int pageViewIndex) =>
                       Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(AppAssets.hadethBg),
                   ),
